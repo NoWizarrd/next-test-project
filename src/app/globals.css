@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,8 +22,14 @@
   box-sizing: border-box;
 }
 
+html {
+  width:100vw;
+  overflow-x:hidden;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-roboto)
+  font-family: var(--font-roboto);
+  
 }

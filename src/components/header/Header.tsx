@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className='flex sticky top-0 bg-blue-400/70 h-16 justify-center'>
+    <header className='flex sticky top-0 bg-blue-300 h-16 justify-center'>
       {/* <Image className='absolute bottom-0 left-6 h-14 top-auto' alt="Next Logo"  src={NextImage}/> */}
         <div className='flex'>
             {[

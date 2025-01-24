@@ -2,12 +2,14 @@
 import { useEffect, useState } from "react";
 import { User } from "types/UserType";
 
+const baseUrlUsers = 'https://jsonplaceholder.typicode.com/users'
+
 export default function UsersPage() {
     const [users, setUsers] = useState<User[]>([]);
 
     const fetchUsers = async () => {
         const response: User[] = await fetch(
-            'https://jsonplaceholder.typicode.com/users',
+            baseUrlUsers,
             {cache: 'force-cache'}
         ).then(response => response.json())
 
