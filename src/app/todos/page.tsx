@@ -22,8 +22,8 @@ export default function TodosPage() {
 
     return(
         <div className="flex flex-col justify-center items-center">
-            <h1 className="my-5 text-2xl">Страница задач</h1>
-            <ul>
+            <h1 className="my-5 text-3xl">Страница задач</h1>
+            <ul className="text-xl">
                 {todos.map((todo)=> (
                     <li key={todo.id} className="border-2 border-sky-300 m-4 p-2">
                         <div>

@@ -1,0 +1,32 @@
+import { ReactNode } from "react"
+
+interface PaginationProps {
+    page: number,
+    totalPages: number,
+    changePage: (page: number) => void
+}
+
+export function Pagination(props: PaginationProps): ReactNode {
+
+    let {page, totalPages, changePage} = props
+
+    return(
+        <>
+            <button
+                className="px-4 py-2 mx-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                disabled={page === 1}
+                onClick={() => changePage(page - 1)}
+                >
+                Назад
+            </button>
+            <span className="text-lg">{page} / {totalPages}</span>
+            <button
+                className="px-4 py-2 mx-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                disabled={page === totalPages}
+                onClick={() => changePage(page + 1)}
+            >
+                Вперёд
+            </button>
+        </>
+    )
+}
