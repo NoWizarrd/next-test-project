@@ -5,9 +5,9 @@
 }
 .lds-ellipsis {
   display: flex;
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
+  position: fixed;
+  top: calc(50vh - 80px);
+  left: calc(50vw);
   justify-content: center;
   align-items: center;
   width: 80px;
