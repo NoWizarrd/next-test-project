@@ -10,13 +10,15 @@ export default function Home() {
           Этот проект создан для изучения возможностей фреймворка <a href="https://nextjs.org/" target="_blank" className="text-blue-500 font-semibold">Next.js</a>, включая работу с маршрутизацией, серверным рендерингом и API.
         </p>
         <p className="mt-4 text-lg font-bold text-gray-700 dark:text-gray-300">
-          На текущий момент реализованы:
+          Реализовано:
         </p>
         <ul className="list-disc list-inside mt-2 text-lg text-gray-700 dark:text-gray-300">
-          <li>Работа с API <span className="font-semibold">JSON Placeholder</span> для отображения данных</li>
+          <li>Работа с API JSON Placeholder для отображения данных</li>
           <li>Динамическая маршрутизация и передача параметров через URL</li>
-          <li>Адаптивный дизайн с использованием <span className="font-semibold">Tailwind CSS</span></li>
-          {/* <li>Темная тема, поддерживаемая через Tailwind</li> */}
+          <li>Адаптивный дизайн и темная тема с использованием <span className="font-semibold">Tailwind CSS</span></li>
+          {/* <li>Настройка <span className="font-semibold">SEO</span> с использованием мета-тегов и оптимизации</li> */}
+          {/* <li>To-Do List с добавлением задач через модальное окно</li> */}
+          {/* <li>Деплой проекта на <span className="font-semibold">Netlify</span></li> */}
         </ul>
       </div>
     </div>

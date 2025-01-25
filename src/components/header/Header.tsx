@@ -1,24 +1,22 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import NextImage from '/public/next.svg'
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
-const toggleTheme = () => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
-        document.documentElement.classList.remove('dark')
-        localStorage.setItem('theme', '')
-    } else {
-        document.documentElement.classList.add('dark')
-        localStorage.setItem('theme', 'dark')
-    }
-  }
-
 export function Header() {
   
   const pathname = usePathname();
-
+  const toggleTheme = () => {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
   const links = [
       ['Home', '/'],
       ['Users', '/users'],
