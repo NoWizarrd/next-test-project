@@ -21,16 +21,16 @@ export default function TodosPage() {
     }, []);
 
     return(
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col  justify-center items-center bg-background text-foreground">
             <h1 className="my-5 text-3xl">Страница задач</h1>
             <ul className="text-xl">
                 {todos.map((todo)=> (
-                    <li key={todo.id} className="border-2 border-sky-300 m-4 p-2">
+                    <li key={todo.id} className="border-2 border-[var(--borderColor)] dark:bg-[var(--darkGray)] m-4 p-2">
                         <div>
                             Title: {todo.title}
                         </div>
                         <div>
-                            Complited: {String(todo.completed)}
+                            Completed: {String(todo.completed)}
                         </div>
                     </li>
                 ))}

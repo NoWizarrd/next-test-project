@@ -30,7 +30,7 @@ export default function PostsPage() {
     }, [page]);
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center bg-background text-foreground">
             <h1 className="my-5 text-3xl">Страница Постов</h1>
             <ul className="text-xl h-[70vh]">
                 <Posts posts={posts}/>

@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${RobotoFont.variable} antialiased`}
       >
-        <ThemeProvider enableSystem={false} defaultTheme='light' attribute="class">
+        <ThemeProvider attribute="class">
             <Header/>
             {children}
         </ThemeProvider>

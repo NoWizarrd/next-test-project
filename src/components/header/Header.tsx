@@ -4,19 +4,29 @@ import React, { useEffect } from 'react'
 import NextImage from '/public/next.svg'
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 
 export function Header() {
   
   const pathname = usePathname();
+  const { theme, setTheme } = useTheme()
+  // const toggleTheme = () => {
+  //   if (document.documentElement.classList.contains('dark')) {
+  //     document.documentElement.classList.remove('dark');
+  //     localStorage.setItem('theme', 'light');
+  //   } else {
+  //     document.documentElement.classList.add('dark');
+  //     localStorage.setItem('theme', 'dark');
+  //   }
+  // }
   const toggleTheme = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+    if (theme === 'light') {
+      setTheme('dark')
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      setTheme('light')
     }
   }
+
   const links = [
       ['Home', '/'],
       ['Users', '/users'],
@@ -25,7 +35,7 @@ export function Header() {
   ];
 
   return (
-    <header className='flex sticky top-0 bg-blue-300 h-16 justify-center'>
+    <header className='flex sticky top-0 bg-blue-300 dark:bg-[var(--darkGray)] text-foreground h-16 justify-center'>
       {/* <Image className='absolute bottom-0 left-6 h-14 top-auto' alt="Next Logo"  src={NextImage}/> */}
         <div className='flex'>
             {links.map(([title, url]) => {
@@ -34,8 +44,8 @@ export function Header() {
                     <Link
                         key={url}
                         href={url}
-                        className={`transition-hover duration-300 text-2xl mx-10 p-2 content-center ${
-                            isActive ? 'bg-blue-500 text-white' : 'hover:bg-blue-400/90'
+                        className={`transition-hover  duration-300 text-2xl mx-10 p-2 content-center ${
+                            isActive ? 'bg-blue-500 text-white dark:bg-gray-700 ' : 'hover:bg-blue-400/90 dark:hover:bg-gray-600/90'
                         }`}
                     >
                         {title}

@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-[calc(100vh-4rem)] bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
-      <div className="flex flex-col my-0 mx-auto p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-2xl shadow-lg max-w-2xl text-center">
+    <div className="flex flex-col justify-center items-center h-[calc(100vh-4rem)] bg-background text-foreground transition-colors duration-300">
+      <div className="flex flex-col my-0 mx-auto p-6 bg-white dark:bg-[var(--darkGray)] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-lg max-w-2xl text-center">
         <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
           Проект на Next.js
         </h1>
