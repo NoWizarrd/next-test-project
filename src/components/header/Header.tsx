@@ -3,12 +3,13 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import NextImage from '/public/next.svg'
 import Image from "next/image";
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
 export function Header() {
   
   const pathname = usePathname();
+  const params = useParams()
   const { theme, setTheme } = useTheme()
   // const toggleTheme = () => {
   //   if (document.documentElement.classList.contains('dark')) {
@@ -39,7 +40,7 @@ export function Header() {
       {/* <Image className='absolute bottom-0 left-6 h-14 top-auto' alt="Next Logo"  src={NextImage}/> */}
         <div className='flex'>
             {links.map(([title, url]) => {
-                const isActive = pathname === url;
+                const isActive = pathname.replace('/' + params.id, '') === url;
                 return (
                     <Link
                         key={url}
