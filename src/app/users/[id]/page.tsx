@@ -26,7 +26,7 @@ export default function UserProfile({params}: {
     return(
         <div className="flex flex-col justify-center items-center bg-background text-foreground">
             <h1 className="text-3xl my-5">Посты пользователя с id: {id}</h1>
-            <ul>
+            <ul className="text-lg max-lg:text-base">
                 <Posts posts={posts}/>
             </ul>
         </div>

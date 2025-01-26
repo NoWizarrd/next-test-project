@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center h-[calc(100vh-4rem)] bg-background text-foreground transition-colors duration-300">
-      <div className="flex flex-col my-0 mx-auto p-6 bg-white dark:bg-[var(--darkGray)] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-lg max-w-2xl text-center">
+      <div className="flex flex-col my-0 mx-4 p-6 max-sm:p-4 bg-white dark:bg-[var(--darkGray)] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-lg max-w-2xl text-center">
         <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
           Проект на Next.js
         </h1>
@@ -16,9 +16,9 @@ export default function Home() {
           <li>Работа с API JSON Placeholder для отображения данных</li>
           <li>Динамическая маршрутизация и передача параметров через URL</li>
           <li>Адаптивный дизайн и темная тема с использованием <span className="font-semibold">Tailwind CSS</span></li>
-          {/* <li>Настройка <span className="font-semibold">SEO</span> с использованием мета-тегов и оптимизации</li> */}
-          {/* <li>To-Do List с добавлением задач через модальное окно</li> */}
-          {/* <li>Деплой проекта на <span className="font-semibold">Netlify</span></li> */}
+          <li>Настройка SEO с использованием <span className="font-semibold">Metadata</span> Next.js</li>
+          <li>To-Do List с возможностью добавления задач</li>
+          <li>Деплой проекта на <span className="font-semibold">Netlify</span></li>
         </ul>
       </div>
     </div>

@@ -36,7 +36,7 @@ export function Header() {
   ];
 
   return (
-    <header className='flex sticky top-0 bg-blue-300 dark:bg-[var(--darkGray)] text-foreground h-16 justify-center'>
+    <header className='flex sticky top-0 z-10 bg-blue-300 dark:bg-[var(--darkGray)] text-foreground h-16 justify-center'>
       {/* <Image className='absolute bottom-0 left-6 h-14 top-auto' alt="Next Logo"  src={NextImage}/> */}
         <div className='flex'>
             {links.map(([title, url]) => {
@@ -45,7 +45,8 @@ export function Header() {
                     <Link
                         key={url}
                         href={url}
-                        className={`transition-hover  duration-300 text-2xl mx-10 p-2 content-center ${
+                        className={`transition-hover  duration-300 text-2xl mx-10 p-2 content-center max-lg:text-base
+                          max-lg:mx-5 ${
                             isActive ? 'bg-blue-500 text-white dark:bg-gray-700 ' : 'hover:bg-blue-400/90 dark:hover:bg-gray-600/90'
                         }`}
                     >

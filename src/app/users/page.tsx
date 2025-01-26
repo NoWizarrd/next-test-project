@@ -25,14 +25,14 @@ export default function UsersPage() {
     return(
         <div className="flex flex-col justify-center items-center bg-background text-foreground">
             <h1 className="my-5 text-3xl">Страница пользователей</h1>
-            <ul className="grid grid-cols-4 text-xl">
+            <ul className="grid grid-cols-4 text-xl max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
                 {users.map((user) => (
                     <Link key={user.id} href={`/users/${user.id}`}>
                         <li
                             className="
                             border-2 border-[var(--borderColor)] dark:bg-[var(--darkGray)] m-4 p-2 
                             duration-300 ease-in-out hover:-translate-y-2
-                            hover:cursor-pointer
+                            hover:cursor-pointer h-20 max-[1340px]:h-28 
                             ">
                             <div>
                                 Name: {user.name}
