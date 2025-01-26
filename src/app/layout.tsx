@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Test project for learn Next",
   openGraph: {
     type: "website",
-    url: "https://example.com",
+    url: "https://next-test-project.netlify.app/",
     title: "Next test app",
     description: "Test project for learn Next"
   }
