@@ -5,11 +5,9 @@ import { ReactNode, useEffect, useState } from "react";
 import { Post } from "types/PostType";
 
 export default function UserProfile({params}: {
-    params: {id: string}
+    params: Promise<{id: string}>
 }): ReactNode {
     const [posts, setPosts] = useState<Post[]>([]);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     const { id } = use(params);
     const url = 'https://jsonplaceholder.typicode.com/posts'
     const fetchUserPosts = async () => {
