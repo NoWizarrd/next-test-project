@@ -22,7 +22,7 @@ export default function TodosPage() {
   const addTodo = () => {
     if (inputTask.trim()) {
       const newTodo: Todo = {
-        id: todos.length + 1, 
+        id: Math.random() * (100 - 10) + 10, 
         title: inputTask,
         completed: false,
         userId: 1,
