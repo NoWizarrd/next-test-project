@@ -16,7 +16,7 @@ export default function Todos (props: TodosProps): ReactNode {
             {todos.map((todo) => (
                 <li key={todo.id}
                 className="
-                flex relative flex-col min-w-[35vw]
+                flex relative flex-col min-w-[350px]
                 border-2 border-[var(--borderColor)] dark:bg-[var(--darkGray)] m-4 p-3">
                     <div className='mr-10'>
                         Title: {todo.title}
