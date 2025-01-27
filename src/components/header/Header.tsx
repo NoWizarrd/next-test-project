@@ -21,7 +21,7 @@ export function Header() {
   //   }
   // }
   const toggleTheme = () => {
-    if (theme === 'light') {
+    if (theme === 'light' || theme === undefined || theme === null) {
       setTheme('dark')
     } else {
       setTheme('light')

@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${RobotoFont.variable} antialiased`}
       >
-        <ThemeProvider attribute="class">
+        <ThemeProvider enableSystem={false} defaultTheme="light" attribute="class">
             <Header/>
             {children}
         </ThemeProvider>
