@@ -46,7 +46,7 @@ export function Header() {
                         key={url}
                         href={url}
                         className={`transition-hover  duration-300 text-2xl mx-10 p-2 content-center max-lg:text-base
-                          max-lg:mx-5 ${
+                          max-lg:mx-5 max-[540px]:mx-1 ${
                             isActive ? 'bg-blue-500 text-white dark:bg-gray-700 ' : 'hover:bg-blue-400/90 dark:hover:bg-gray-600/90'
                         }`}
                     >
