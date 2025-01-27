@@ -31,8 +31,8 @@ export default function PostsPage() {
 
     return (
         <div className="flex flex-col  justify-center items-center bg-background text-foreground">
-            <h1 className="my-5 text-3xl">Страница Постов</h1>
-            <div className="items-center justify-center py-4">
+            <h1 className="my-5 text-3xl max-sm:text-xl">Страница Постов</h1>
+            <div className="items-center justify-center py-4 max-sm:text-sm">
                 <Pagination page={page} totalPages={totalPages} changePage={setPage}/>
             </div>
             <ul className="text-xl max-lg:text-base">

@@ -45,7 +45,7 @@ export default function TodosPage() {
   
   return (
     <div className="flex flex-col justify-center items-center bg-background text-foreground p-5">
-      <h1 className="my-5 text-3xl">Страница задач</h1>
+      <h1 className="my-5 text-3xl max-sm:text-xl">Страница задач</h1>
       <div className="flex items-center gap-2 mb-5">
         <input
           value={inputTask}
@@ -55,7 +55,7 @@ export default function TodosPage() {
             px-4 py-2 border rounded-lg
             bg-white text-black dark:bg-gray-800 dark:text-white
             focus:ring-2 focus:ring-blue-500 focus:outline-none
-            border-gray-300 dark:border-gray-600
+            border-gray-300 dark:border-gray-600 max-[540px]:text-sm
           "
         />
         <button
@@ -63,7 +63,7 @@ export default function TodosPage() {
           className="
             px-4 py-2 bg-blue-500 dark:bg-gray-700 
             text-white dark:text-[#d1d5db] rounded-lg hover:bg-blue-600 dark:hover:bg-gray-600
-            transition-colors duration-200
+            transition-colors duration-200 max-[540px]:text-sm
           "
         >
           Добавить задачу

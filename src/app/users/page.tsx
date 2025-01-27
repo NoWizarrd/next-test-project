@@ -24,7 +24,7 @@ export default function UsersPage() {
 
     return(
         <div className="flex flex-col justify-center items-center bg-background text-foreground">
-            <h1 className="my-5 text-3xl">Страница пользователей</h1>
+            <h1 className="my-5 text-3xl max-sm:text-xl">Страница пользователей</h1>
             <ul className="grid grid-cols-4 text-xl max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
                 {users.map((user) => (
                     <Link key={user.id} href={`/users/${user.id}`}>
