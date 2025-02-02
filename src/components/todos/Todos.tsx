@@ -25,7 +25,9 @@ export default function Todos (props: TodosProps): ReactNode {
                         Completed: {String(todo.completed)}
                     </div>
                     <button onClick={() => removeTodo((todo.id))} className='absolute top-0 right-1 hover:text-blue-500 dark:hover:text-gray-500'>X</button>
-                    <button onClick={() => click((todo.id))} className='absolute bottom-0 right-1 hover:text-blue-500 dark:hover:text-gray-500'>Выполнить</button>
+                    <button onClick={() => click((todo.id))} className='absolute bottom-0 right-1 hover:text-blue-500 dark:hover:text-gray-500'>
+                        {!todo.completed ? 'Выполнить' : 'Отложить'}
+                    </button>
                 </li>
             ))}
         </>
