@@ -8,35 +8,29 @@ const baseUrlPosts = 'https://jsonplaceholder.typicode.com/posts';
 
 export default function PostsPage() {
     const [posts, setPosts] = useState<Post[]>([]);
-    const [limit, setLimit] = useState(5); 
     const [page, setPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1); 
-
-    const fetchPosts = async () => {
-        const response = await fetch(
-            `${baseUrlPosts}?_limit=${limit}&_page=${page}`,
-            {
-                cache: 'force-cache',
-            },
-        );
-        const data: Post[] = await response.json();
-        const totalCount = parseInt(response.headers.get('X-Total-Count') || '0', 10);
-        setTotalPages(Math.ceil(totalCount / limit));
-        setPosts(data);
-    };
+    const limit = 5;
 
     useEffect(() => {
+        const fetchPosts = async () => {
+            const response = await fetch(baseUrlPosts, { cache: 'force-cache' });
+            const data: Post[] = await response.json();
+            setPosts(data);
+        };
         fetchPosts();
-    }, [page]);
+    }, []);
+
+    const totalPages = Math.ceil(posts.length / limit);
+    const displayedPosts = posts.slice((page - 1) * limit, page * limit);
 
     return (
-        <div className="flex flex-col  justify-center items-center bg-background text-foreground">
+        <div className="flex flex-col justify-center items-center bg-background text-foreground">
             <h1 className="my-5 text-3xl max-sm:text-xl">Страница Постов</h1>
             <div className="items-center justify-center py-4 max-sm:text-sm">
                 <Pagination page={page} totalPages={totalPages} changePage={setPage}/>
             </div>
             <ul className="text-xl max-lg:text-base">
-                <Posts posts={posts}/>
+                <Posts posts={displayedPosts}/>
             </ul>
         </div>
     );
