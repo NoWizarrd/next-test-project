@@ -8,7 +8,7 @@ const baseUrlPosts = 'https://jsonplaceholder.typicode.com/posts';
 
 export default function PostsPage() {
     const [posts, setPosts] = useState<Post[]>([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState<number>(1);
     const limit = 5;
 
     useEffect(() => {

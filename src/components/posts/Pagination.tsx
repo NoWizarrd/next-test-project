@@ -3,19 +3,20 @@ import { ReactNode } from "react"
 interface PaginationProps {
     page: number,
     totalPages: number,
-    changePage: (page: number) => void
+    changePage: (page: any) => number
 }
 
 export function Pagination(props: PaginationProps): ReactNode {
 
     let {page, totalPages, changePage} = props
 
+
     return(
         <>
             <button
                 className="px-4 py-2 mx-2 bg-blue-500 dark:bg-gray-700 text-white dark:text-[#d1d5db] rounded disabled:opacity-50"
                 disabled={page === 1}
-                onClick={() => changePage(page - 1)}
+                onClick={() => changePage((page: number) => page - 1)}
                 >
                 Назад
             </button>
@@ -23,7 +24,7 @@ export function Pagination(props: PaginationProps): ReactNode {
             <button
                 className="px-4 py-2 mx-2 bg-blue-500 dark:bg-gray-700 text-white dark:text-[#d1d5db] rounded disabled:opacity-50"
                 disabled={page === totalPages}
-                onClick={() => changePage(page + 1)}
+                onClick={() => changePage((page: number) => page + 1)}
             >
                 Вперёд
             </button>
