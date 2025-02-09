@@ -27,7 +27,10 @@ export default function PostsPage() {
         <div className="flex flex-col justify-center items-center bg-background text-foreground">
             <h1 className="my-5 text-3xl max-sm:text-xl">Страница Постов</h1>
             <div className="items-center justify-center py-4 max-sm:text-sm">
-                <Pagination page={page} totalPages={totalPages} changePage={setPage}/>
+                <Pagination page={page} totalPages={totalPages} changePage={(newPage) => {
+                                                                setPage(newPage);
+                                                                return newPage;  
+                                                            }}/>
             </div>
             <ul className="text-xl max-lg:text-base">
                 <Posts posts={displayedPosts}/>
